@@ -12,7 +12,7 @@
 
     <modules>
         <module>journey-webApp</module>
-        <module>jouney-service</module>
+        <module>journey-service</module>
     </modules>
 
 

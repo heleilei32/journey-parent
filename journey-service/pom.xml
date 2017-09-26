@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jouney-service</artifactId>
+    <artifactId>journey-service</artifactId>
     <packaging>jar</packaging>
 
-    <name>jouney-service</name>
+    <name>journey-service</name>
     <url>http://maven.apache.org</url>
 
     <properties>
