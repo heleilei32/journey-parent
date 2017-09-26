@@ -14,6 +14,8 @@
         <module>journey-webApp</module>
         <module>journey-service</module>
         <module>journey-data-hibernate</module>
+        <module>journey-model</module>
+        <module>journey-utils</module>
     </modules>
 
 
