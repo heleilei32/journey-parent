@@ -1,4 +1,4 @@
-package com.lei;
+package com.lei.service;
 
 /**
  * Hello world!
