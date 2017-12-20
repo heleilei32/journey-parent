@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>journey-parent</artifactId>
+        <groupId>com.lei</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>journey-webApp-ReactVue</artifactId>
+    <packaging>war</packaging>
+    <name>journey-webApp-ReactVue Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
+
+    <dependencies>
+
+        <!--依赖service层-->
+        <dependency>
+            <groupId>com.lei</groupId>
+            <artifactId>journey-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- Web Dependencies -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>${jsp.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.taglibs</groupId>
+            <artifactId>taglibs-standard-compat</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.taglibs</groupId>
+            <artifactId>taglibs-standard-impl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.taglibs</groupId>
+            <artifactId>taglibs-standard-jstlel</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.taglibs</groupId>
+            <artifactId>taglibs-standard-spec</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>journey-webApp-ReactVue</finalName>
+    </build>
+</project>
