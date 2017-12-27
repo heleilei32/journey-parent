@@ -1,5 +1,7 @@
 package com.lei;
 
+import com.lei.service.Utils.MyJob;
+import com.lei.service.Utils.QuartzManager;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -31,11 +33,16 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
+
+    public static String JOB_NAME = "动态任务调度";
+    public static String TRIGGER_NAME = "动态任务触发器";
+    public static String JOB_GROUP_NAME = "XLXXCC_JOB_GROUP";
+    public static String TRIGGER_GROUP_NAME = "XLXXCC_JOB_GROUP";
     public void testApp()
     {
-        assertTrue( true );
-    }
+        QuartzManager quartzManager = new QuartzManager();
 
+        }
 
 
 }

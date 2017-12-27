@@ -15,4 +15,18 @@
     </context:component-scan>
 
 
+
+    <bean id="jobFactory" class="com.lei.service.Utils.MyJobFactory"></bean>
+
+
+    <!-- 定时任务的factorybean,配置其他config -->
+
+
+    <bean id="schedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" >
+        <property name="jobFactory" ref="jobFactory"></property>
+    </bean>
+
+
+
+
 </beans>
