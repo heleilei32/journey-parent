@@ -22,4 +22,8 @@ public class FormulaServiceImpl implements FormulaService{
         formula.setValue("123456");
         formulaRepository.save(formula);
     }
+
+    public void test(){
+        System.out.printf("123456");
+    }
 }
