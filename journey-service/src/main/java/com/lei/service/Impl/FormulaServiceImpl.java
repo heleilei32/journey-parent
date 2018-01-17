@@ -24,6 +24,6 @@ public class FormulaServiceImpl implements FormulaService{
     }
 
     public void test(){
-        System.out.printf("123456");
+        System.out.printf("");
     }
 }
