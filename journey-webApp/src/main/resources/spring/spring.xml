@@ -16,7 +16,7 @@
 
 
 
-    <bean id="jobFactory" class="com.lei.service.Utils.MyJobFactory"></bean>
+    <bean id="jobFactory" class="com.lei.service.Quartz.MyJobFactory"></bean>
 
 
     <!-- 定时任务的factorybean,配置其他config -->

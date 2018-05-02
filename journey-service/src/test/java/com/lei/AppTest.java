@@ -1,7 +1,6 @@
 package com.lei;
 
-import com.lei.service.Utils.MyJob;
-import com.lei.service.Utils.QuartzManager;
+import com.lei.service.Quartz.QuartzManager;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
