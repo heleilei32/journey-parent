@@ -11,7 +11,7 @@ public class BT1024ServiceImplTest extends TestCase {
         BT1024ServiceImpl bt1024Service = new BT1024ServiceImpl();
         for (int i = 1 ; i <= 22 ; i++){
             System.out.println("开始页数:"+i);
-            String bt = bt1024Service.getBt(i + "", "01.12");
+            String bt = bt1024Service.getBt(i + "", "04.16");
             if ("1".equals(bt)){
                 return;
             }
@@ -24,6 +24,10 @@ public class BT1024ServiceImplTest extends TestCase {
         BT1024ServiceImpl bt1024Service = new BT1024ServiceImpl();
         bt1024Service.downLoadBt(null);
 
+    }
+    public void testCiLiLian() throws Exception {
+        BT1024ServiceImpl bt1024Service = new BT1024ServiceImpl();
+        bt1024Service.writeToFile(null);
     }
 
 }

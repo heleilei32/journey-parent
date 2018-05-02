@@ -6,6 +6,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -21,7 +22,7 @@ public class BT1024ServiceImpl {
 
     private static Logger logger = Logger.getLogger(HttpClientUtil.class);
 
-    private String URL = "http://w2.aqu1024.rocks/pw/thread.php";
+    private String URL = "http://1024.917rbb.pw/pw/thread.php";
     private String MAINTITLE = "国产"; //国产无码 国产高清
     private String name = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
     private String fileName = "H:\\资源\\" + name + ".html";
@@ -29,7 +30,6 @@ public class BT1024ServiceImpl {
 
     public BT1024ServiceImpl() throws IOException {
     }
-
 
     public String getBt(String page, String endDate) throws Exception {
         HashMap<String, String> params = new HashMap<>();
@@ -92,7 +92,28 @@ public class BT1024ServiceImpl {
                     outputStream.write(abiaoqian.toString());
                     outputStream.write("<br>");
                     outputStream.flush();
+                }else if (href1.contains("www1")){
+//               磁力链
+                    writeToFile(href1);
                 }
+            }
+        }
+
+    }
+
+    public void writeToFile(String url) throws IOException {
+        url = "http://www1.downsx.club/torrent/A87636AA51360DE6BDE34182FE12BF2E6DD2D7B7";
+        String s = HttpClientUtil.doGet(url);
+
+        Document parse = Jsoup.parse(s);
+        Element body = parse.body();
+        Elements as = body.getElementsByTag("a");
+        for (Element abiaoqian : as) {
+            String href = abiaoqian.attr("href");
+            if (href.contains("magnet")){
+                outputStream.write(href);
+                outputStream.write("<br>");
+                outputStream.flush();
             }
         }
 
