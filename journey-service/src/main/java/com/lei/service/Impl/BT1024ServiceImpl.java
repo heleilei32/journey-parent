@@ -102,7 +102,6 @@ public class BT1024ServiceImpl {
     }
 
     public void writeToFile(String url) throws IOException {
-        url = "http://www1.downsx.club/torrent/A87636AA51360DE6BDE34182FE12BF2E6DD2D7B7";
         String s = HttpClientUtil.doGet(url);
 
         Document parse = Jsoup.parse(s);
@@ -111,6 +110,7 @@ public class BT1024ServiceImpl {
         for (Element abiaoqian : as) {
             String href = abiaoqian.attr("href");
             if (href.contains("magnet")){
+                System.out.println(href);
                 outputStream.write(href);
                 outputStream.write("<br>");
                 outputStream.flush();
